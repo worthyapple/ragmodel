@@ -9,3 +9,4 @@ docarray
 PyMuPDF
 panel
 bokeh
+streamlit
