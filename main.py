@@ -12,8 +12,12 @@ import os
 import panel as pn  # type: ignore
 import param  # type: ignore
 
-if not os.getenv("HUGGINGFACEHUB_API_TOKEN"):
-    os.environ["HUGGINGFACEHUB_API_TOKEN"] = getpass.getpass("Enter your Hugging Face API token: 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")
+import os
+# Assumes you set this in the Render environment
+hf_token = os.environ.get("HUGGINGFACEHUB_API_TOKEN")
+
+if not hf_token:
+    raise ValueError("HUGGINGFACEHUB_API_TOKEN environment variable not set.")
 
 
 def load_db(file, chain_type, k):
