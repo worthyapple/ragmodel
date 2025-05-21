@@ -13,6 +13,10 @@ import panel as pn  # type: ignore
 import param  # type: ignore
 
 import os
+
+import streamlit as st
+st.title("My RAG App")
+st.write("Running HuggingFace model…")
 # Assumes you set this in the Render environment
 hf_token = os.environ.get("HUGGINGFACEHUB_API_TOKEN")
 
