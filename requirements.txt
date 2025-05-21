@@ -1,0 +1,11 @@
+langchain
+langchain_huggingface
+langchain_community
+panel
+param
+sentence-transformers
+huggingface_hub
+docarray
+PyMuPDF
+panel
+bokeh
