@@ -259,4 +259,6 @@ pn.config.raw_css.append('''
 ''')
 
 #pn.serve(dashboard)
-dashboard.servable()
+if __name__ == "__main__":
+    pn.serve(dashboard, port=8501, address="0.0.0.0")
+
