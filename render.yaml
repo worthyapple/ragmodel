@@ -1,9 +1,7 @@
 services:
   - type: web
-    name: yourowndata-bot
-    runtime: python
+    name: ragmodel-app
+    env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: panel serve main.py --address 0.0.0.0 --port 10000 --allow-websocket-origin=*
-    envVars:
-      - key: HUGGINGFACEHUB_API_TOKEN
-        value: YOUR_TOKEN_HERE
+    startCommand: streamlit run main.py --server.port=$PORT --server.address=0.0.0.0
